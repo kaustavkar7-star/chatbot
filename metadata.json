@@ -1,0 +1,6 @@
+{
+  "name": "CampusConnect AI — Student Helpdesk",
+  "description": "Smart college campus student helpdesk with embedded n8n AI workflow for campus policies, hostel, fees, leave, ID cards, and IT support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

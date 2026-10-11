@@ -1,0 +1,246 @@
+import { HelpCategory, CampusOffice, CampusPolicyFaq } from '../types';
+
+export const HELP_CATEGORIES: HelpCategory[] = [
+  {
+    id: 'fees-payments',
+    title: 'Fees & Payments',
+    badge: 'Finance & Accounts',
+    description: 'Semester tuition schedules, scholarship credits, installment options, late penalty policies, and payment receipts.',
+    iconName: 'CreditCard',
+    accentColor: {
+      bg: 'bg-emerald-50/70',
+      border: 'border-emerald-200/80',
+      text: 'text-emerald-900',
+      badgeBg: 'bg-emerald-100 text-emerald-800',
+      iconBg: 'bg-emerald-500 text-white',
+    },
+    sampleQuestions: [
+      'How do I pay my semester fees?',
+      'What is the penalty for late fee payment?',
+      'How do I get an official fee payment receipt for education loan?',
+      'Can I apply for installment-based fee payment?',
+    ],
+    associatedOffice: {
+      name: 'Finance & Accounts Office',
+      location: 'Admin Block, Ground Floor, Room 104',
+      email: 'accounts@campus.edu',
+      hours: 'Mon – Fri: 9:30 AM – 4:30 PM',
+    },
+  },
+  {
+    id: 'hostel-mess',
+    title: 'Hostel & Mess',
+    badge: 'Residential Life',
+    description: 'Room allotment guidelines, mess rebate claims, entry/curfew rules, maintenance tickets, and warden approvals.',
+    iconName: 'Building2',
+    accentColor: {
+      bg: 'bg-blue-50/70',
+      border: 'border-blue-200/80',
+      text: 'text-blue-900',
+      badgeBg: 'bg-blue-100 text-blue-800',
+      iconBg: 'bg-blue-600 text-white',
+    },
+    sampleQuestions: [
+      'What are the hostel office hours?',
+      'How do I apply for a mess fee rebate during leave?',
+      'What is the evening curfew time for campus hostels?',
+      'How do I request room maintenance or repair?',
+    ],
+    associatedOffice: {
+      name: 'Chief Warden & Housing Office',
+      location: 'Hostel Central Complex, Block A',
+      email: 'warden-office@campus.edu',
+      hours: 'Mon – Sat: 8:00 AM – 8:00 PM',
+    },
+  },
+  {
+    id: 'leave-academic',
+    title: 'Leave & Academic Procedures',
+    badge: 'Dean Academic Affairs',
+    description: 'Leave of absence, 75% attendance rule, duty leaves for events, grade re-checks, and transcript applications.',
+    iconName: 'GraduationCap',
+    accentColor: {
+      bg: 'bg-indigo-50/70',
+      border: 'border-indigo-200/80',
+      text: 'text-indigo-900',
+      badgeBg: 'bg-indigo-100 text-indigo-800',
+      iconBg: 'bg-indigo-600 text-white',
+    },
+    sampleQuestions: [
+      'How do I apply for leave?',
+      'What medical documents are needed for sick leave approval?',
+      'What is the minimum attendance requirement for final exams?',
+      'How do I apply for an official transcript or bonafide certificate?',
+    ],
+    associatedOffice: {
+      name: 'Office of Academic Affairs & Registrar',
+      location: 'Main Administrative Building, 1st Floor',
+      email: 'academics@campus.edu',
+      hours: 'Mon – Fri: 9:00 AM – 5:00 PM',
+    },
+  },
+  {
+    id: 'id-cards',
+    title: 'Student ID Cards',
+    badge: 'Registrar Security Desk',
+    description: 'Smart campus RFID cards, lost or damaged card replacement, barcode activation for library, and turnstile access.',
+    iconName: 'IdCard',
+    accentColor: {
+      bg: 'bg-teal-50/70',
+      border: 'border-teal-200/80',
+      text: 'text-teal-900',
+      badgeBg: 'bg-teal-100 text-teal-800',
+      iconBg: 'bg-teal-600 text-white',
+    },
+    sampleQuestions: [
+      'How can I replace my ID card?',
+      'What documents are needed to report a lost campus ID?',
+      'How do I activate my student ID card for 24/7 library turnstile access?',
+      'What is the fee and turnaround time for a duplicate ID card?',
+    ],
+    associatedOffice: {
+      name: 'Student ID & Security Verification Desk',
+      location: 'Student Affairs Center, Desk 3',
+      email: 'idcards@campus.edu',
+      hours: 'Mon – Fri: 10:00 AM – 4:00 PM',
+    },
+  },
+  {
+    id: 'wifi-it',
+    title: 'Wi-Fi & IT Support',
+    badge: 'Computing Services',
+    description: 'Campus 802.1X secure Wi-Fi, student email (@campus.edu) recovery, lab server access, and VPN configuration.',
+    iconName: 'Wifi',
+    accentColor: {
+      bg: 'bg-cyan-50/70',
+      border: 'border-cyan-200/80',
+      text: 'text-cyan-900',
+      badgeBg: 'bg-cyan-100 text-cyan-800',
+      iconBg: 'bg-cyan-600 text-white',
+    },
+    sampleQuestions: [
+      'My Wi-Fi is not connecting.',
+      'How do I reset my student university email password?',
+      'How do I register a new laptop MAC address on the hostel network?',
+      'How do I connect to the university VPN from outside campus?',
+    ],
+    associatedOffice: {
+      name: 'IT Helpdesk & Computing Center',
+      location: 'Computing Center Building, Room 202',
+      email: 'it-support@campus.edu',
+      hours: 'Mon – Sat: 8:30 AM – 9:00 PM',
+    },
+  },
+];
+
+export const HOW_IT_WORKS_STEPS = [
+  {
+    step: 1,
+    title: 'Ask your question',
+    subtitle: 'Conversational & Instant',
+    description: 'Type any inquiry in plain language about hostel curfews, exam schedules, fee deadlines, leave approvals, or tech setups.',
+    icon: 'MessageSquareText',
+  },
+  {
+    step: 2,
+    title: 'Get guidance from campus policy documents',
+    subtitle: 'Verified & Cited',
+    description: 'CampusConnect AI processes your question against institutional student handbooks, statutory circulars, and official university guidelines.',
+    icon: 'BookOpenCheck',
+  },
+  {
+    step: 3,
+    title: 'Contact the appropriate office if human assistance is needed',
+    subtitle: 'Escalation & Ticket Trace',
+    description: 'Whenever a request requires formal officer sign-off or physical submission, get designated room numbers, office hours, and ticket tracking IDs.',
+    icon: 'Building',
+  },
+];
+
+export const CAMPUS_OFFICES: CampusOffice[] = [
+  {
+    id: 'finance',
+    name: 'Finance & Student Accounts',
+    department: 'Bursar & Accounts Division',
+    location: 'Admin Block, Ground Floor, Room 104',
+    email: 'accounts@campus.edu',
+    phone: '+1 (555) 019-2831',
+    hours: 'Mon – Fri: 9:30 AM – 4:30 PM',
+    primaryTopics: ['Tuition fee receipts', 'Scholarship disbursement', 'Late fee waiver petitions', 'Mess advance clearance'],
+  },
+  {
+    id: 'hostel',
+    name: 'Office of the Chief Warden',
+    department: 'Campus Residential Services',
+    location: 'Hostel Central Complex, Block A, Room 12',
+    email: 'warden-office@campus.edu',
+    phone: '+1 (555) 019-8842',
+    hours: 'Mon – Sat: 8:00 AM – 8:00 PM (Emergency 24/7)',
+    primaryTopics: ['Room allotment', 'Mess rebates', 'Gate passes & curfews', 'Hostel maintenance'],
+  },
+  {
+    id: 'academics',
+    name: 'Academic Affairs & Registrar',
+    department: 'Office of the University Registrar',
+    location: 'Main Administrative Building, 1st Floor',
+    email: 'academics@campus.edu',
+    phone: '+1 (555) 019-5510',
+    hours: 'Mon – Fri: 9:00 AM – 5:00 PM',
+    primaryTopics: ['Attendance tracking', 'Medical leave verification', 'Transcripts & grade sheets', 'Course drop/add'],
+  },
+  {
+    id: 'it',
+    name: 'Campus Computing & IT Helpdesk',
+    department: 'Information Technology Services (ITS)',
+    location: 'Computing Center Building, Room 202',
+    email: 'it-support@campus.edu',
+    phone: '+1 (555) 019-4090',
+    hours: 'Mon – Sat: 8:30 AM – 9:00 PM',
+    primaryTopics: ['Campus Wi-Fi authentication', 'Student email recovery', 'Campus lab software licenses', 'Portal access'],
+  },
+  {
+    id: 'welfare',
+    name: 'Student Welfare & Security Desk',
+    department: 'Dean of Student Affairs',
+    location: 'Student Activity Center, Counter 3',
+    email: 'idcards@campus.edu',
+    phone: '+1 (555) 019-3320',
+    hours: 'Mon – Fri: 10:00 AM – 4:00 PM',
+    primaryTopics: ['Student ID replacements', 'RFID turnstile access', 'Parking permits', 'Lost & found'],
+  },
+];
+
+export const POPULAR_FAQS: CampusPolicyFaq[] = [
+  {
+    question: 'What is the minimum attendance threshold required to appear for semester end examinations?',
+    category: 'Academics',
+    shortAnswer: 'A minimum of 75% attendance in each registered theory and laboratory course is strictly required. For medical absences with approved hospital proof, a relaxation up to 65% may be granted by the Dean.',
+    documentSource: 'Academic Regulations 2025-26, Section 6.2 (Attendance & Condonation Rules)',
+  },
+  {
+    question: 'How many days before can I apply for a Mess Rebate when going on vacation or internship?',
+    category: 'Hostel & Mess',
+    shortAnswer: 'Mess rebate applications must be submitted online at least 3 calendar days before your planned departure date. The minimum qualifying absence duration is 4 consecutive days.',
+    documentSource: 'Hostel Resident Handbook 2025, Rule 14 (Dining & Mess Rebate Policy)',
+  },
+  {
+    question: 'What should I do immediately if I lose my Student Smart ID card?',
+    category: 'Student ID Cards',
+    shortAnswer: 'Immediately report the lost card via your Student Portal to block RFID building access, then submit a replacement request at the Student Affairs Desk with your police GD / affidavit and payment of $15 duplicate card fee.',
+    documentSource: 'Campus Safety & ID Issuance Circular, Sec. 3B',
+  },
+  {
+    question: 'Why does the campus Wi-Fi say "Action Required / Network Disabled"?',
+    category: 'IT Support',
+    shortAnswer: 'Ensure your device connects to "Campus-Secure-5G" using WPA2-Enterprise with PEAP authentication. Do not use anonymous identity; your username must be your full student roll number.',
+    documentSource: 'Computing Center Knowledge Base KB-109: 802.1X Device Configuration',
+  },
+];
+
+export const DEFAULT_SUGGESTED_QUESTIONS = [
+  'What are the hostel office hours?',
+  'How do I pay my semester fees?',
+  'My Wi-Fi is not connecting.',
+  'How can I replace my ID card?',
+  'How do I apply for leave?',
+];
